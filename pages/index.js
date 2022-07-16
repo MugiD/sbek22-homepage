@@ -105,7 +105,7 @@ const Page = () => {
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
-          My Links
+          My Contacts
         </Heading>
         <List>
           <ListItem>
