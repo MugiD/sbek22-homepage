@@ -58,4 +58,10 @@ export default [
     description:
       "A self-adapting system that learns about the outer world by asking its visitors what they like and what they don't like.",
   },
+  {
+    name: "Playphrase",
+    source: "https://www.playphrase.me",
+    description: 
+      "Find a movie by checking if it has the entered phrase in it"
+  }
 ];
