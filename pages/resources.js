@@ -1,11 +1,9 @@
-import Head from "next/head";
-import { Heading, Box, Container } from "@chakra-ui/react";
+import { useColorModeValue, Box, Container, Heading } from "@chakra-ui/react";
 import data from "../public/resourceList";
 import styled from "@emotion/styled";
 
 const Resource = styled(Box)`
   .resource {
-    border: 2px solid #88ccca;
     border-radius: 7px;
     padding: 20px;
     margin: 20px 0px;
@@ -28,12 +26,20 @@ export default function Resources() {
       {data &&
         data.map((resource) => (
           <Resource key={resource.name}>
-            <Box className="resource">
-              <h1>
-                <a href={resource.source}>{resource.name}</a>
-              </h1>
-              <p>~ {resource.description}</p>
-            </Box>
+            <a href={resource.source}>
+              <Box
+                className="resource"
+                bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+              >
+                <Heading
+                  color={useColorModeValue("purple", "orange")}
+                  fontSize="lg"
+                >
+                  {resource.name}
+                </Heading>
+                <p>~ {resource.description}</p>
+              </Box>
+            </a>
           </Resource>
         ))}
     </Container>
