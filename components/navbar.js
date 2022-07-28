@@ -54,9 +54,16 @@ const Navbar = (props) => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="md" letterSpacing={"tighter"} borderBottom="4px solid">
+          <NextLink href="/" path={path}>
+            <Heading
+              as="h1"
+              size="md"
+              letterSpacing={"tighter"}
+              borderBottom="4px solid"
+            >
               Bek Slambek
-          </Heading>
+            </Heading>
+          </NextLink>
         </Flex>
         <Stack
           direction={{ base: "column", md: "row" }}
@@ -65,9 +72,6 @@ const Navbar = (props) => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
-          </LinkItem>
           <LinkItem href="/resources" path={path}>
             Resources
           </LinkItem>
@@ -93,9 +97,6 @@ const Navbar = (props) => {
               <MenuList>
                 <NextLink href="/" passHref>
                   <MenuItem as={Link}>About</MenuItem>
-                </NextLink>
-                <NextLink href="/works" passHref>
-                  <MenuItem as={Link}>Works</MenuItem>
                 </NextLink>
                 <NextLink href="/resources" passHref>
                   <MenuItem as={Link}>Resources</MenuItem>
