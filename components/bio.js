@@ -12,4 +12,5 @@ export const BioYear = styled.span`
   font-weight: bold;
   margin-right: 1em;
   margin-left: 20px;
+  color: #27B0A6;
 `

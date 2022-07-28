@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import Image from "next/image";
 import Section from "../components/section";
-import { ChevronRightIcon } from "@chakra-ui/icons";
+import { LinkIcon } from "@chakra-ui/icons";
 import Paragraph from "../components/paragraph";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import { BioSection, BioYear } from "../components/bio";
@@ -118,11 +118,16 @@ const Page = () => {
           tutorials can help him to become a PROgrammer
         </Paragraph>
         <Box align="center" my={4}>
-          <NextLink href="/works" passHref scroll={false}>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              My works
+          <a href="https://github.com/MugiD?tab=repositories" target="_blank">
+            <Button rightIcon={<LinkIcon />} colorScheme="teal" mr={2}>
+              My Github
             </Button>
-          </NextLink>
+          </a>
+          <a href="https://github.com/orgs/dbdteam/repositories" target="_blank">
+            <Button rightIcon={<LinkIcon />} colorScheme="teal">
+              My Team
+            </Button>
+          </a>
         </Box>
       </Section>
 
@@ -192,7 +197,7 @@ const Page = () => {
               <Button
                 variant="ghost"
                 colorScheme="teal"
-                leftIcon={<IoLogoInstagram />}
+                leftIcon={<IoLogoTwitter />}
               >
                 @sbek22
               </Button>
