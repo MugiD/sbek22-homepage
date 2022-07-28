@@ -75,6 +75,9 @@ const Navbar = (props) => {
           <LinkItem href="/resources" path={path}>
             Resources
           </LinkItem>
+          <LinkItem href="/resume.docx" path="path">
+            Resume
+          </LinkItem>
           <LinkItem
             target="_blank"
             href="https://github.com/craftzdog/craftzdog-homepage/"
