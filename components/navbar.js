@@ -1,4 +1,3 @@
-import Logo from "./logo";
 import NextLink from "next/link";
 import {
   Container,
@@ -55,8 +54,8 @@ const Navbar = (props) => {
         justify="space-between"
       >
         <Flex align="center" mr={5}>
-          <Heading as="h1" size="lg" letterSpacing={"tighter"}>
-            <Logo />
+          <Heading as="h1" size="md" letterSpacing={"tighter"} borderBottom="4px solid">
+              Bek Slambek
           </Heading>
         </Flex>
         <Stack
