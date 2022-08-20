@@ -68,7 +68,7 @@ const Page = () => {
             right="0"
           >
             <ProfileImage
-              src="/images/profileBek.png"
+              src="/images/profileBek.jpeg"
               alt="Profile image"
               borderRadius="full"
               width="100%"
