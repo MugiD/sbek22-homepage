@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navbar from "../Navbar.js";
+import Navbar from "./Navbar.js";
 import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 
 const Main = ({ children, router }) => {
@@ -10,9 +10,7 @@ const Main = ({ children, router }) => {
         <title>Homepage | Bek Slambek</title>
       </Head>
       <Navbar path={router.asPath} />
-      <Container maxW="container.lg" pt={14}>
-        {children}
-      </Container>
+      {children}
     </Box>
   );
 };

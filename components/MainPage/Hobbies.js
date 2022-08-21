@@ -1,5 +1,5 @@
-import Section from "./Section";
-import Paragraph from "./Paragraph";
+import Section from "../Section";
+import Paragraph from "../Paragraph";
 import { Heading } from "@chakra-ui/react";
 
 const Hobbies = () => {
