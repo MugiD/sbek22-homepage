@@ -1,5 +1,5 @@
 import { Box, Heading, useColorModeValue } from "@chakra-ui/react";
-import Section from "../Section";
+import Section from "../CustomComponents/Section";
 import styled from "@emotion/styled";
 
 const BioSection = styled(Box)`

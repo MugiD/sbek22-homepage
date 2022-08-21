@@ -1,6 +1,6 @@
 import { IoLogoLinkedin, IoLogoTwitter, IoMail } from "react-icons/io5";
 import { List, Link, ListItem, Button, Heading } from "@chakra-ui/react";
-import Section from "../Section";
+import Section from "../CustomComponents/Section";
 
 const Contacts = () => {
   return (
