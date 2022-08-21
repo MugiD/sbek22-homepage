@@ -55,14 +55,16 @@ const Navbar = (props) => {
       >
         <Flex align="center" mr={5}>
           <NextLink href="/" path={path}>
-            <Heading
-              as="h1"
-              size="md"
-              letterSpacing={"tighter"}
-              borderBottom="4px solid"
-            >
-              Bek Slambek
-            </Heading>
+            <a>
+              <Heading
+                as="h1"
+                size="md"
+                letterSpacing={"tighter"}
+                borderBottom="4px solid"
+              >
+                Bek Slambek
+              </Heading>
+            </a>
           </NextLink>
         </Flex>
         <Stack
@@ -75,16 +77,9 @@ const Navbar = (props) => {
           <LinkItem href="/resources" path={path}>
             Resources
           </LinkItem>
-          <LinkItem href="/resume.docx" path="path">
+          {/* <LinkItem href="/resume.docx" path="path">
             Resume
-          </LinkItem>
-          <LinkItem
-            target="_blank"
-            href="https://github.com/craftzdog/craftzdog-homepage/"
-            path={path}
-          >
-            Source
-          </LinkItem>
+          </LinkItem> */}
         </Stack>
 
         <Box flex={1} align="right">
@@ -104,12 +99,6 @@ const Navbar = (props) => {
                 <NextLink href="/resources" passHref>
                   <MenuItem as={Link}>Resources</MenuItem>
                 </NextLink>
-                <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem>
               </MenuList>
             </Menu>
           </Box>

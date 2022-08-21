@@ -1,5 +1,5 @@
 import Chakra from "../components/chakra";
-import Layout from "../components/layouts/main";
+import Layout from "../components/layouts/Main";
 import Fonts from "../components/fonts";
 import { AnimatePresence } from "framer-motion";
 
@@ -15,11 +15,9 @@ const Website = ({ Component, pageProps, router }) => {
         <AnimatePresence
           exitBeforeEnter
           initial={true}
-          onExitComplete={() => {
-            if (typeof window !== "undefined") {
-              window.scrollTo({ top: 0 });
-            }
-          }}
+          onExitComplete={() =>
+            typeof window !== "undefined" && window.scrollTo({ top: 0 })
+          }
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
