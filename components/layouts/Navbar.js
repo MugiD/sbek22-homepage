@@ -19,7 +19,11 @@ const LinkItem = ({ href, path, children }) => {
   const hoverColor = useColorModeValue("blackAlpha.100", "whiteAlpha.200");
   return (
     <NextLink href={href} passHref scroll={false}>
-      <Link p={2} fontWeight={active ? "extrabold" : "regular"}  _hover={{bg: hoverColor}}>
+      <Link
+        p={2}
+        fontWeight={active ? "extrabold" : "regular"}
+        _hover={{ bg: hoverColor }}
+      >
         {children}
       </Link>
     </NextLink>
@@ -31,7 +35,7 @@ const Navbar = (props) => {
 
   return (
     <Box
-      position="sticky"
+      position="fixed"
       as="nav"
       w="100%"
       style={{ backdropFilter: "blur(10px" }}
@@ -56,10 +60,14 @@ const Navbar = (props) => {
             />
             <MenuList>
               <NextLink href="/" passHref>
-                <MenuItem as={Link}>Home</MenuItem>
+                <MenuItem as={Link}>
+                  <a>Home</a>
+                </MenuItem>
               </NextLink>
               <NextLink href="/resources" passHref>
-                <MenuItem as={Link}>Resources</MenuItem>
+                <MenuItem as={Link}>
+                  <a>Resources</a>
+                </MenuItem>
               </NextLink>
             </MenuList>
           </Menu>
@@ -75,7 +83,7 @@ const Navbar = (props) => {
             <a>Home</a>
           </LinkItem>
           <LinkItem href="/resources" path={path}>
-            Resources
+            <a>Resources</a>
           </LinkItem>
         </Stack>
 

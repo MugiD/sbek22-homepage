@@ -1,47 +1,41 @@
-import { useColorModeValue, Box, Container, Heading } from "@chakra-ui/react";
+import {
+  useColorModeValue,
+  Box,
+  Container,
+  Heading,
+  Text,
+} from "@chakra-ui/react";
 import data from "../public/resourceList";
-import styled from "@emotion/styled";
-
-const Resource = styled(Box)`
-  .resource {
-    border-radius: 7px;
-    padding: 20px;
-    margin: 20px 0px;
-  }
-
-  .resource > h1 {
-    font-size: 2em;
-    font-weight: 700;
-    color: #88ccca;
-  }
-
-  .resource > h1 > a {
-    text-decoration: underline;
-  }
-`;
 
 export default function Resources() {
   return (
     <Container maxW="container.lg" pt={14}>
       <Heading variant="section-title">Resources</Heading>
+      <Text
+        textAlign="center"
+        fontSize="20px"
+        color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}
+      >
+        Here is a collection of useful websites that will make your life better.
+        Hope you will enjoy it
+      </Text>
       {data &&
         data.map((resource) => (
-          <Resource key={resource.name}>
+          <Box key={resource.name}>
             <a href={resource.source}>
               <Box
-                className="resource"
-                bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+                bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
+                rounded="7px"
+                p="20px"
+                my="20px"
               >
-                <Heading
-                  color={useColorModeValue("purple", "orange")}
-                  fontSize="lg"
-                >
+                <Heading color="orange.400" fontSize="lg" fontWeight="black">
                   {resource.name}
                 </Heading>
                 <p>~ {resource.description}</p>
               </Box>
             </a>
-          </Resource>
+          </Box>
         ))}
     </Container>
   );
