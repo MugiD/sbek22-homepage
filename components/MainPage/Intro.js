@@ -79,7 +79,7 @@ const Intro = () => {
             mt={6}
             p={3}
             textAlign="center"
-            bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+            bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
           >
             Enthusiast, Developer, Designer
           </Box>

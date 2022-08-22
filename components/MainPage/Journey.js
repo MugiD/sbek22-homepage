@@ -13,7 +13,7 @@ const BioYear = styled.span`
   font-weight: bold;
   margin-right: 1em;
   margin-left: 20px;
-  color: #27b0a6;
+  color: #ED8936;
 `;
 
 const Bio = () => {
@@ -22,6 +22,7 @@ const Bio = () => {
       <Heading as="h3" variant="section-title" mx={5}>
         My Journey
       </Heading>
+      <Box>
       <BioSection>
         <BioYear>07/01/2020</BioYear> Basics of Frontend Development
       </BioSection>
@@ -34,12 +35,13 @@ const Bio = () => {
       <BioSection>
         <BioYear>2022 - now</BioYear> Web Development, Python
       </BioSection>
+      </Box>
       <Box
         borderRadius="lg"
         my={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+        bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
         css={{ backdropFilter: "blur(10px)" }}
         mx={5}
       >

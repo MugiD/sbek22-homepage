@@ -22,7 +22,8 @@ const Resource = styled(Box)`
 
 export default function Resources() {
   return (
-    <Container>
+    <Container maxW="container.lg" pt={14}>
+      <Heading variant="section-title">Resources</Heading>
       {data &&
         data.map((resource) => (
           <Resource key={resource.name}>
