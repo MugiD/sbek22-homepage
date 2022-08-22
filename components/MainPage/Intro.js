@@ -5,16 +5,34 @@ import {
   Image,
   useColorModeValue,
   Text,
+  usePrefersReducedMotion,
+  keyframes,
 } from "@chakra-ui/react";
-import AnimatedText from "../CustomComponents/AnimatedText";
+
+const type = keyframes`
+  from, to { width: 0; border-color: transparent}
+  50% { width: 100%; border-color: white }
+`;
+
+const typeBorder = keyframes`
+  from, to { border-color: transparent}
+  50% { border-color: white }
+`;
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
 });
 
 const Intro = () => {
+  const prefersReducedMotion = usePrefersReducedMotion();
+
+  const animation = prefersReducedMotion
+    ? undefined
+    : `${type} infinite 15s linear,
+    ${typeBorder} infinite .42s step-end`;
+
   return (
-    <Box>
+    <Box my={10}>
       <Box
         display={{ md: "flex", base: "block" }}
         textAlign="center"
@@ -43,7 +61,19 @@ const Intro = () => {
           <Heading variant="page-title" fontSize="48px" fontWeight="extrabold">
             Bek Slambek
           </Heading>
-          <AnimatedText>Jack of all trades (Beta version)</AnimatedText>
+          <Text
+            mx="auto"
+            maxW="max-content"
+            animation={animation}
+            overflow="hidden"
+            borderRight="solid"
+            whiteSpace="nowrap"
+            fontWeight="semiBold"
+            fontSize="18px"
+            pr={1}
+          >
+            Jack of all Trades ( Beta Version )
+          </Text>
           <Box
             borderRadius="lg"
             mt={6}

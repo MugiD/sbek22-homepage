@@ -6,7 +6,7 @@ import { LinkIcon } from "@chakra-ui/icons";
 const About = () => {
   return (
     <Section delay={0.1}>
-      <Heading as="h3" variant="section-title" mx={5}>
+      <Heading as="h3" variant="section-title">
         About
       </Heading>
       <Paragraph>
