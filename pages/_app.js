@@ -1,5 +1,5 @@
 import Chakra from "../components/chakra";
-import Layout from "../components/layouts/Main";
+import Main from "../components/layouts/main";
 import Fonts from "../components/fonts";
 import { AnimatePresence } from "framer-motion";
 
@@ -11,7 +11,7 @@ const Website = ({ Component, pageProps, router }) => {
   return (
     <Chakra cookies={pageProps.cookies}>
       <Fonts />
-      <Layout router={router}>
+      <Main router={router}>
         <AnimatePresence
           exitBeforeEnter
           initial={true}
@@ -21,7 +21,7 @@ const Website = ({ Component, pageProps, router }) => {
         >
           <Component {...pageProps} key={router.route} />
         </AnimatePresence>
-      </Layout>
+      </Main>
     </Chakra>
   );
 };
