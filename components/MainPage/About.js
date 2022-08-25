@@ -25,14 +25,14 @@ const About = () => {
             I am interested in Sports, Video Games, Anime, Graphic Design, Web
             Development
           </Paragraph>
-          <Box align="center" my={4}>
+          <Box align="center" my={4} >
             <a href="https://github.com/MugiD/" target="_blank">
-              <Button rightIcon={<LinkIcon />} bg="orange.400" mr={2}>
+              <Button rightIcon={<LinkIcon />} bg="orange.400" mr={2} color="white">
                 My Github
               </Button>
             </a>
             <a href="https://github.com/jolshylar/" target="_blank">
-              <Button rightIcon={<LinkIcon />} bg="orange.400">
+              <Button rightIcon={<LinkIcon />} bg="orange.400" color="white">
                 My Team
               </Button>
             </a>
