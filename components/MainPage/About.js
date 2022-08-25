@@ -27,12 +27,12 @@ const About = () => {
           </Paragraph>
           <Box align="center" my={4} >
             <a href="https://github.com/MugiD/" target="_blank">
-              <Button rightIcon={<LinkIcon />} bg="orange.400" mr={2} color="white">
+              <Button rightIcon={<LinkIcon />} colorScheme="orange" mr={2}>
                 My Github
               </Button>
             </a>
             <a href="https://github.com/jolshylar/" target="_blank">
-              <Button rightIcon={<LinkIcon />} bg="orange.400" color="white">
+              <Button rightIcon={<LinkIcon />} colorScheme="orange">
                 My Team
               </Button>
             </a>

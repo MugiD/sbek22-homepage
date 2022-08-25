@@ -46,7 +46,6 @@ const Navbar = (props) => {
         display="flex"
         p={2}
         maxW="container.lg"
-        wrap="wrap"
         align="center"
         justify="space-between"
       >
