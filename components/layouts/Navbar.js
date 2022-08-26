@@ -60,12 +60,12 @@ const Navbar = (props) => {
             <MenuList>
               <NextLink href="/" passHref>
                 <MenuItem as={Link}>
-                  <a>Home</a>
+                  Home
                 </MenuItem>
               </NextLink>
               <NextLink href="/resources" passHref>
                 <MenuItem as={Link}>
-                  <a>Resources</a>
+                  Resources
                 </MenuItem>
               </NextLink>
             </MenuList>
@@ -79,10 +79,10 @@ const Navbar = (props) => {
           mt={{ base: 4, md: 0 }}
         >
           <LinkItem href="/" path={path}>
-            <a>Home</a>
+            Home
           </LinkItem>
           <LinkItem href="/resources" path={path}>
-            <a>Resources</a>
+            Resources
           </LinkItem>
         </Stack>
 
