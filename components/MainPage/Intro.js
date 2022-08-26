@@ -58,7 +58,7 @@ const Intro = () => {
         </Box>
 
         <Box flexGrow={1} textAlign="center" mx={5}>
-          <Heading variant="page-title" fontSize="48px" fontWeight="extrabold">
+          <Heading variant="page-title" fontWeight="extrabold" fontSize={{base: "36px", md:"48px"}}>
             Bek Slambek
           </Heading>
           <Text
