@@ -6,14 +6,14 @@ import {
   Container,
   Divider,
   Button,
-  Avatar
+  Image
 } from "@chakra-ui/react";
 import { ChevronLeftIcon } from "@chakra-ui/icons";
 
 const NotFound = () => {
   return (
     <Container maxW="container.lg" pt={14} minH="100vh" display="flex" flexDirection="column" alignItems="center" justifyContent="center">
-      <Avatar src="/images/sadchoppa.jpg" alt="not found" rounded="full" w={200} h={200}/>
+      <Image src="/images/sadchoppa.jpg" alt="not found" rounded="full" w={200} h={200}/>
       <Heading as="h1">Not found</Heading>
       <Text>The page you&apos;re looking for was not found.</Text>
       <Divider my={6} />
