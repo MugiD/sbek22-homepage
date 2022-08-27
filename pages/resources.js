@@ -4,9 +4,33 @@ import {
   Container,
   Heading,
   Text,
+  Select
 } from "@chakra-ui/react";
 import data from "../public/resourceList";
-import Section from '../components/CustomComponents/Section'
+import Section from "../components/CustomComponents/Section";
+
+export function ResourceItem({ resource }) {
+  return (
+    <Box _hover={{ transform: "translateY(-5px)" }}>
+      <a href={resource.source}>
+        <Box
+          bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
+          rounded="7px"
+          p="20px"
+          my="20px"
+        >
+          <Box display="flex" gap={2}>
+            <Heading color="orange.400" fontSize="lg" fontWeight="black">
+              {resource.name}
+            </Heading>
+            <Text color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}>{resource.type}</Text>
+          </Box>
+          <p>~ {resource.description}</p>
+        </Box>
+      </a>
+    </Box>
+  );
+}
 
 export default function Resources() {
   return (
@@ -18,26 +42,12 @@ export default function Resources() {
         color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}
       >
         Here is a collection of useful websites that will make your life better.
-        Hope you will enjoy it
+        Hope you'll enjoy it
       </Text>
       <Section delay={0.1}>
         {data &&
           data.map((resource) => (
-            <Box key={resource.name}>
-              <a href={resource.source}>
-                <Box
-                  bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
-                  rounded="7px"
-                  p="20px"
-                  my="20px"
-                >
-                  <Heading color="orange.400" fontSize="lg" fontWeight="black">
-                    {resource.name}
-                  </Heading>
-                  <p>~ {resource.description}</p>
-                </Box>
-              </a>
-            </Box>
+            <ResourceItem key={resource.name} resource={resource} />
           ))}
       </Section>
     </Container>

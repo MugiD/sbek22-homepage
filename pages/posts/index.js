@@ -32,7 +32,7 @@ const Post = ({ allPostsData }) => {
         Here I share my opinion on different topics
       </Text>
       <Section delay={0.1}>
-        <Box display="grid" gridTemplateColumns="repeat(2, 1fr)" gap={4}>
+        <Box display="grid" gridTemplateColumns={{lg: "repeat(2, 1fr)", base: "repeat(1, 1fr)"}} gap={4}>
           {allPostsData.map(({ id, date, title}) => (
             <Link href={`/posts/${id}`} passHref>
               <Box
