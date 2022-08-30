@@ -1,6 +1,7 @@
 import { Container } from "@chakra-ui/react";
 import Intro from "../components/MainPage/Intro";
 import About from "../components/MainPage/About";
+import Head from 'next/head'
 
 const Home = () => {
   return (
