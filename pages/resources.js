@@ -1,13 +1,13 @@
 import {
   useColorModeValue,
   Box,
-  Container,
   Heading,
   Text,
   Select,
 } from "@chakra-ui/react";
 import data from "../public/resourceList";
 import Section from "../components/CustomComponents/Section";
+import Wrapper from "../components/layouts/Wrapper";
 
 export function ResourceItem({ resource }) {
   return (
@@ -41,7 +41,7 @@ export function ResourceItem({ resource }) {
 
 export default function Resources() {
   return (
-    <Container maxW="container.lg" pt={14}>
+    <Wrapper t="Resources" d="I sometimes collect some websites that will make your life better">
       <Heading variant="section-title">Resources</Heading>
       <Text
         textAlign="center"
@@ -57,6 +57,6 @@ export default function Resources() {
             <ResourceItem key={resource.name} resource={resource} />
           ))}
       </Section>
-    </Container>
+    </Wrapper>
   );
 }

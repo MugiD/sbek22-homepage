@@ -2,13 +2,13 @@ import Date from "../../components/date";
 import { getSortedPostsData } from "../../lib/posts";
 import Section from "../../components/CustomComponents/Section";
 import {
-  Container,
   Heading,
   Box,
   Text,
   useColorModeValue,
   Link,
 } from "@chakra-ui/react";
+import Wrapper from "../../components/layouts/Wrapper";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
 const Post = ({ allPostsData }) => {
   return (
-    <Container maxW="container.lg" pt={14} minH="100vh">
+    <Wrapper t="Posts" d="Read blogs written by Bek Slambek. Deep thoughts often stay here">
       <Heading variant="section-title">My Posts</Heading>
       <Text
         textAlign="center"
@@ -32,8 +32,12 @@ const Post = ({ allPostsData }) => {
         Here I share my opinion on different topics
       </Text>
       <Section delay={0.1}>
-        <Box display="grid" gridTemplateColumns={{lg: "repeat(2, 1fr)", base: "repeat(1, 1fr)"}} gap={4}>
-          {allPostsData.map(({ id, date, title}) => (
+        <Box
+          display="grid"
+          gridTemplateColumns={{ lg: "repeat(2, 1fr)", base: "repeat(1, 1fr)" }}
+          gap={4}
+        >
+          {allPostsData.map(({ id, date, title }) => (
             <Link href={`/posts/${id}`} passHref>
               <Box
                 bg={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
@@ -55,7 +59,7 @@ const Post = ({ allPostsData }) => {
           ))}
         </Box>
       </Section>
-    </Container>
+    </Wrapper>
   );
 };
 

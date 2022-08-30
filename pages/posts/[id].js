@@ -31,10 +31,7 @@ export default function Post({ postData }) {
           property="og:description"
           content={`${postData.contentHtml}`}
         />
-        <meta property="og:type" content="website" />
         <meta name="twitter:title" content={`${postData.title} | Bek Slambek`} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:creator" content="@sbek22_" />
       </Head>
       <Box>
         <Heading>{postData.title}</Heading>
