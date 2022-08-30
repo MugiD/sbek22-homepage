@@ -4,7 +4,7 @@ import {
   Container,
   Heading,
   Text,
-  Select
+  Select,
 } from "@chakra-ui/react";
 import data from "../public/resourceList";
 import Section from "../components/CustomComponents/Section";
@@ -23,7 +23,14 @@ export function ResourceItem({ resource }) {
             <Heading color="orange.400" fontSize="lg" fontWeight="black">
               {resource.name}
             </Heading>
-            <Text color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}>{resource.type}</Text>
+            {resource.type.map((r) => (
+              <Text
+              key={r.name}
+                color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}
+              >
+              {r.name} |
+              </Text>
+            ))}
           </Box>
           <p>~ {resource.description}</p>
         </Box>
