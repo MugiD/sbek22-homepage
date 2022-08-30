@@ -1,7 +1,8 @@
 import Section from "../CustomComponents/Section";
 import Paragraph from "../CustomComponents/Paragraph";
-import { Heading, Box, Button, Flex, Image } from "@chakra-ui/react";
+import { Heading, Box, Button, Flex, Image, Icon, Stack } from "@chakra-ui/react";
 import { LinkIcon } from "@chakra-ui/icons";
+import { SiTailwindcss, SiChakraui, SiNextdotjs, SiReact, SiTypescript } from 'react-icons/si'
 
 const About = () => {
   return (
@@ -16,16 +17,22 @@ const About = () => {
       >
         <Box w={{ base: "100%", md: "50%" }}>
           <Paragraph>
-            Bek is a full-stack developer from Kazakhstan. He works with
-            different technologies such as JavaScript, C# and Python. Bek
-            believes that YouTube tutorials can help him become a valuable
-            programmer.
+            I'm a full-stack developer from Kazakhstan. I widely use different
+            technologies for Web Development: Typescript, NextJS, React and
+            Chakra(sometimes I prefer to use TailwindCSS).
           </Paragraph>
+          <Stack direction="row" spacing={6} justifyContent="center" my={6}>
+            <Icon as={SiReact} w={8} h={8} />
+            <Icon as={SiNextdotjs} w={8} h={8}/>
+            <Icon as={SiTypescript} w={8} h={8}/>
+            <Icon as={SiChakraui} w={8} h={8}/>
+            <Icon as={SiTailwindcss}  w={8} h={8}/>
+        </Stack>
           <Paragraph>
             I am interested in Sports, Video Games, Anime, Graphic Design, Web
-            Development
+            Development, Python etc.
           </Paragraph>
-          <Box align="center" my={4} >
+          <Box align="center" my={4}>
             <a href="https://github.com/MugiD/" target="_blank">
               <Button rightIcon={<LinkIcon />} colorScheme="orange" mr={2}>
                 My Github
@@ -40,9 +47,8 @@ const About = () => {
         </Box>
         <Image
           src="./images/chopper.jpg"
-          height="25%"
-          width="25%"
-          display={{ base: "none", md: "block" }}
+          height="30%"
+          width="30%"
         />
       </Flex>
     </Section>

@@ -10,6 +10,7 @@ import Section from "../components/CustomComponents/Section";
 import Wrapper from "../components/layouts/Wrapper";
 
 export function ResourceItem({ resource }) {
+
   return (
     <Box _hover={{ transform: "translateY(-5px)" }}>
       <a href={resource.source}>
@@ -23,14 +24,9 @@ export function ResourceItem({ resource }) {
             <Heading color="orange.400" fontSize="lg" fontWeight="black">
               {resource.name}
             </Heading>
-            {resource.type.map((r) => (
-              <Text
-              key={r.name}
-                color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}
-              >
-              {r.name} |
-              </Text>
-            ))}
+            {/* <Text color={useColorModeValue("blackAlpha.500", "whiteAlpha.500")}>
+              {typename} /
+            </Text> */}
           </Box>
           <p>~ {resource.description}</p>
         </Box>
@@ -41,7 +37,10 @@ export function ResourceItem({ resource }) {
 
 export default function Resources() {
   return (
-    <Wrapper t="Resources" d="I sometimes collect some websites that will make your life better">
+    <Wrapper
+      t="Resources"
+      d="I sometimes collect some websites that will make your life better"
+    >
       <Heading variant="section-title">Resources</Heading>
       <Text
         textAlign="center"
