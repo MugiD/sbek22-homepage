@@ -8,6 +8,7 @@ import {
   usePrefersReducedMotion,
   keyframes,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
 const type = keyframes`
   from, to { width: 0; border-color: transparent}
@@ -26,9 +27,25 @@ const ProfileImage = chakra(Image, {
 const Intro = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
+  const phrases = [
+    "Jack of All Trades",
+    "How to Leave Vim?",
+    "Average Math Enjoyer",
+  ];
+
+  const [phrase, setPhrase] = useState(
+    phrases[Math.floor(Math.random() * phrases.length)]
+  );
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPhrase(phrases[Math.floor(Math.random() * phrases.length)]);
+    }, 10000);
+  });
+
   const animation = prefersReducedMotion
     ? undefined
-    : `${type} infinite 15s linear,
+    : `${type} infinite 10s linear,
     ${typeBorder} infinite .42s step-end`;
 
   return (
@@ -43,8 +60,8 @@ const Intro = () => {
           borderColor="whiteAlpha.800"
           borderWidth={2}
           borderStyle="solid"
-          w="200px"
-          h="200px"
+          w={200}
+          h={200}
           display="inline-block"
           borderRadius="full"
         >
@@ -58,7 +75,11 @@ const Intro = () => {
         </Box>
 
         <Box flexGrow={1} textAlign="center" mx={5}>
-          <Heading variant="page-title" fontWeight="extrabold" fontSize={{base: "36px", md:"48px"}}>
+          <Heading
+            variant="page-title"
+            fontWeight="extrabold"
+            fontSize={{ base: 36, md: 48 }}
+          >
             Bek Slambek
           </Heading>
           <Text
@@ -69,10 +90,10 @@ const Intro = () => {
             borderRight="solid"
             whiteSpace="nowrap"
             fontWeight="semiBold"
-            fontSize="18px"
+            fontSize={18}
             pr={1}
           >
-            Jack of all Trades ( Beta Version )
+            {phrase}
           </Text>
           <Box
             borderRadius="lg"
