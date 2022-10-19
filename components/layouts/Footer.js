@@ -3,7 +3,8 @@ import {
     IoLogoTwitter,
     IoLogoInstagram,
     IoLogoGithub,
-    IoLogoCodepen
+    IoLogoCodepen,
+    IoLogoMedium
   } from "react-icons/io5";
   import {
     chakra,
@@ -66,6 +67,9 @@ import {
           </SocialButton>
           <SocialButton label="LinkedIn" href="https://linkedin.com/in/sbek22">
             <Icon as={IoLogoLinkedin}  w={8} h={8}/>
+          </SocialButton>
+          <SocialButton label="Medium" href="https://medium.com/@sbek22">
+            <Icon as={IoLogoMedium} w={8} h={8}/>
           </SocialButton>
         </Stack>
       </Container>
