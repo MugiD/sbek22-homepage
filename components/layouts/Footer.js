@@ -59,9 +59,9 @@ import {
           <SocialButton label="Instagram" href="https://instagram.com/sbek22">
             <Icon as={IoLogoInstagram} w={8} h={8}/>
           </SocialButton>
-          <SocialButton label="Codepen" href="https://codepen.io/mugid">
-            <Icon as={IoLogoCodepen} w={8} h={8}/>
-          </SocialButton>
+          // <SocialButton label="Codepen" href="https://codepen.io/mugid">
+          //   <Icon as={IoLogoCodepen} w={8} h={8}/>
+          // </SocialButton>
           <SocialButton label="GitHub" href="https://github.com/MugiD">
             <Icon as={IoLogoGithub} w={8} h={8}/>
           </SocialButton>
