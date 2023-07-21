@@ -52,7 +52,7 @@ import {
         borderTop="solid"
         borderTopColor={useColorModeValue("blackAlpha.100", "whiteAlpha.200")}
       >
-        <Stack direction="row" spacing={6}>
+        <Stack direction="row" spacing={5}>
           <SocialButton label="Twitter" href="https://twitter.com/sbek22_">
             <Icon as={IoLogoTwitter} w={8} h={8} />
           </SocialButton>
